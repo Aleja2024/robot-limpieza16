@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #cccccc, #a0c4ff);
+            margin: 0; 
+            padding: 0; 
+            min-height: 100hv; 
+            display: flex; 
+            flex-direction: column;
+            justify-content: space-between; 
+            text-align: center; 
+        }
+        
+        h1 {
+            color: #15202B;
+            font-size: 2.5em; 
+            font-family: Arial, sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px; 
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.8); 
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+        img {width: 300px; 
+            height: 300px; 
+        }
+            
+            
+    </style>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="librerias/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="librerias/alertifyjs/css/alertify.css">
+    <link rel="stylesheet" type="text/css" href="librerias/alertifyjs/css/themes/default.css">
+
+
+    <title>robot</title>
+    <script src="librerias/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+    <div id="recibir"></div>
+    <div class="container">
+
+        <button class="btn btn-primary btn-transparent" data-toggle="modal" data-target="#modalNuevo">
+            Agregar nuevo
+            <span class="glyphicon glyphicon-plus"></span>
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="modalNuevo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Agrega nueva persona</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form id="formulario">
+                            <div class="form-group">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre">
+                            </div>
+                            <div class="form-group">
+                                <label for="correo">Descripcion</label>
+                                <input type="text" class="form-control" id="descripcion" name="descripcion">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefono">Imagen</label>
+                                <input type="text" class="form-control" id="imagen" name="imagen">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="telefono">Video</label>
+                                <input type="text" class="form-control" id="video" name="video">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="telefono">Precio</label>
+                                <input type="text" class="form-control" id="precio" name="precio">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="recibir1"></div>
+ 
+</body>
+</html>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card text-center">
+                <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+                    <a href="/" class="btn btn-info btn-lg" (click)="deleteT(tipificacion.id)">
+                        <span class="glyphicon glyphicon-trash"></span> Trash
+                    </a>
+                    <h2><?php echo $ver[1] ?></h2>
+                    <button type="button" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-shopping-cart"></span> Carro de compras
+                    </button>
+                    <i class="far fa-trash-alt"></i>
+                </div>
+                <!-- Imagen pequeña y centrada -->
+                <div class="card-body">
+                    <p>limpiador mr musculo</p>
+                    <img style="width: 300px; height: 300px;" src="./Img/limpia2.webp" alt="Imagen de Producto">
+                    <!-- Reproductor de video -->
+                    <iframe width="460" height="215" src="https://www.youtube.com/embed/O2WorZRGaOU?si=CfgiTt0Ov9pfHjzc" frameborder="0" allowfullscreen></iframe>
+                    <!-- Fin del reproductor de video -->
+                    <p><?php echo $ver[2] ?></p>
+                    <p><?php echo $ver[3] ?></p>
+                    <p><?php echo $ver[4] ?></p>
+                    <a [routerLink]="['/crubtipificacion/edit', tipificacion.id]" class="btn btn-info btn-block">
+                        EDITAR
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card text-center">
+                <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+                    <a href="/" class="btn btn-info btn-lg" (click)="deleteT(tipificacion.id)">
+                        <span class="glyphicon glyphicon-trash"></span> Trash
+                    </a>
+                    <h2><?php echo $ver[1] ?></h2>
+                    <button type="button" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-shopping-cart"></span> Carro de compras
+                    </button>
+                    <i class="far fa-trash-alt"></i>
+                </div>
+                <!-- Imagen pequeña y centrada -->
+                <div class="card-body">
+                    <p>robot limpiador walle</p>
+                    <img style="max-width: 150px; height: ;" src="./Img/walle1.jpg" alt="Imagen de Producto">
+                    <!-- Reproductor de video -->
+                    <iframe width="460" height="215" src="https://www.youtube.com/embed/QHH3iSeDBLo?si=1oW70RXsUee2kUjt" frameborder="0" allowfullscreen></iframe>
+                    <!-- Fin del reproductor de video -->
+                    <p><?php echo $ver[2] ?></p>
+                    <p><?php echo $ver[3] ?></p>
+                    <p><?php echo $ver[4] ?></p>
+                    <a [routerLink]="['/crubtipificacion/edit', tipificacion.id]" class="btn btn-info btn-block">
+                        EDITAR
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="librerias/bootstrap/js/bootstrap.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#recibir').load('Componentes/recibir.php');
+    });
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#recibir').load('Componentes/recibir1.php');
+});
+</script>
+
+
+<script>
+    $(document).ready(function(){
+        $('#formulario').submit(function(e){
+            e.preventDefault(); 
+
+            var formData = $(this).serialize();
+            $.ajax({
+                type: 'POST',
+                url: 'registro_robot.php', 
+                data: formData,
+                success: function(response){
+                    alert(response);
+                    $('#modalNuevo').modal('hide'); 
+                    $('#formulario')[0].reset(); 
+                },
+                error: function(xhr, status, error){
+                    console.error(xhr.responseText); 
+                }
+            });
+        });
+    });
+</script>

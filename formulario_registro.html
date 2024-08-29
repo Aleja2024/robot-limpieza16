@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuarios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, rgba(0, 17, 255, 0.808), rgb(216, 181, 181));
+            margin: 0;
+            padding: 0;
+            color: #fff; /* Cambiar el color del texto a blanco */
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: rgba(0, 0, 0, 0.144);
+            border-radius: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            text-align: left; /* Alinear el texto a la izquierda */
+        }
+        input[type="submit"] {
+            width: calc(100% - 20px);
+            background-color: #15136e;
+            color: rgb(255, 255, 255);
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-sizing: border-box;
+        }
+        input[type="submit"]:hover {
+            background-color: #ffffff;
+            color: #2b136e;
+        }
+        .logo {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .danife {
+            float: right;
+            width: 40%;
+            max-width: 300px;
+            height: auto;
+            margin-top: -90px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <h2>Formulario de Registro</h2>
+        <form action="registro_usua.php" method="POST">
+            <center>
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" required><br>
+                
+                <label for="correo">Correo:</label><br>
+                <input type="email" id="correo" name="correo" required><br>
+                
+                <label for="contrasena">Contraseña:</label><br>
+                <input type="password" id="contrasena" name="contrasena" required><br><br>
+                
+                <input type="submit" value="Aceptar">
+
+            </center>
+            
+            
+        </form>
+    </div>
+    <img src="Img/Img.png" class="danife" alt="Danife Image">
+</body>
+</html>
